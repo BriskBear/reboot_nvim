@@ -1,0 +1,1 @@
+{"secondary_sources":[],"primary_source":{"id":"pkg:golang\/github.com\/go-delve\/delve@v1.20.2#cmd\/dlv","type":"registry+v1","source":{"version":"v1.20.2","package":"github.com\/go-delve\/delve\/cmd\/dlv"}},"name":"delve","links":{"bin":{"dlv":"dlv"},"opt":{},"share":{}},"metrics":{"completion_time":1685036345017,"start_time":1685036333614},"schema_version":"1.1"}
