@@ -1,9 +1,9 @@
-[16:10:32.503][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:66]: Lua Lsp startup, root: 	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec
-[16:10:32.503][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:67]: ROOT:	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec
-[16:10:32.503][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:68]: LOGPATH:	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/log
-[16:10:32.503][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:69]: METAPATH:	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
-[16:10:32.503][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:70]: VERSION:	3.6.21
-[16:10:32.522][info] [#0:script/service/service.lua:144]: 
+[15:23:39.381][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:66]: Lua Lsp startup, root: 	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec
+[15:23:39.381][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:67]: ROOT:	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec
+[15:23:39.381][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:68]: LOGPATH:	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/log
+[15:23:39.381][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:69]: METAPATH:	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
+[15:23:39.381][info] [#0:/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:70]: VERSION:	3.6.21
+[15:23:39.405][info] [#0:script/service/service.lua:144]: 
 ========= Medical Examination Report =========
     --------------- Memory ---------------
         Total: 1.321 MB
@@ -25,7 +25,7 @@
         Holdon:   0
         Waiting:  0
 ==============================================
-[16:10:32.525][info] [#0:script/client.lua:657]: Client init	{
+[15:23:39.410][info] [#0:script/client.lua:657]: Client init	{
   capabilities = {
     textDocument = {
       callHierarchy = {
@@ -184,7 +184,7 @@
     version = "0.9.0"
   },
   initializationOptions = {},
-  processId = 237992,
+  processId = 36454,
   rootPath = "/etc/xdg/nvim/lua/",
   rootUri = "file:///etc/xdg/nvim/lua/",
   trace = "off",
@@ -193,7 +193,7 @@
       uri = "file:///etc/xdg/nvim/lua/"
     } }
 }
-[16:10:32.525][info] [#0:script/language.lua:137]: VSC language: nil
-[16:10:32.525][info] [#0:script/language.lua:138]: LS  language: en-us
-[16:10:32.525][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///etc/xdg/nvim/lua/
-[16:10:32.525][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_etc_xdg_nvim_lua_.log
+[15:23:39.410][info] [#0:script/language.lua:137]: VSC language: nil
+[15:23:39.410][info] [#0:script/language.lua:138]: LS  language: en-us
+[15:23:39.410][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///etc/xdg/nvim/lua/
+[15:23:39.410][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/elijahdaniel/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_etc_xdg_nvim_lua_.log

@@ -1129,7 +1129,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:github/clj-kondo/clj-kondo@v2023.05.18",
+      "id": "pkg:github/clj-kondo/clj-kondo@v2023.05.26",
       "asset": [
         {
           "target": "darwin_arm64",
@@ -4697,6 +4697,11 @@
           "bin": "exec:libexec/bin/lua-language-server"
         },
         {
+          "target": "linux_x64_musl",
+          "file": "lua-language-server-{{version}}-linux-x64-musl.tar.gz:libexec/",
+          "bin": "exec:libexec/bin/lua-language-server"
+        },
+        {
           "target": "win_x86",
           "file": "lua-language-server-{{version}}-win32-ia32.zip",
           "bin": "bin/lua-language-server.exe"
@@ -5905,7 +5910,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/%40prisma/language-server@31.0.2238"
+      "id": "pkg:npm/%40prisma/language-server@31.0.2250"
     },
     "bin": {
       "prisma-language-server": "npm:prisma-language-server"
@@ -7557,7 +7562,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:gem/sorbet@0.5.10844",
+      "id": "pkg:gem/sorbet@0.5.10845",
       "supported_platforms": [
         "darwin_x64",
         "darwin_arm64",
@@ -7658,7 +7663,7 @@
       "Linter"
     ],
     "source": {
-      "id": "pkg:pypi/sqlfluff@2.1.0"
+      "id": "pkg:pypi/sqlfluff@2.1.1"
     },
     "bin": {
       "sqlfluff": "pypi:sqlfluff"
@@ -7900,7 +7905,7 @@
       "LSP"
     ],
     "source": {
-      "id": "pkg:npm/svelte-language-server@0.15.10"
+      "id": "pkg:npm/svelte-language-server@0.15.11"
     },
     "schemas": {
       "lsp": "vscode:https://raw.githubusercontent.com/sveltejs/language-tools/language-server-{{version}}/packages/svelte-vscode/package.json"
@@ -9167,7 +9172,7 @@
       "Formatter"
     ],
     "source": {
-      "id": "pkg:pypi/yamlfix@1.9.0"
+      "id": "pkg:pypi/yamlfix@1.10.0"
     },
     "bin": {
       "yamlfix": "pypi:yamlfix"
