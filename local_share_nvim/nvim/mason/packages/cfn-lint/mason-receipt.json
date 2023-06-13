@@ -1,1 +1,0 @@
-{"metrics":{"start_time":1685130616422,"completion_time":1685130630990},"links":{"share":{},"bin":{"cfn-lint":"venv\/bin\/cfn-lint"},"opt":{}},"secondary_sources":[],"schema_version":"1.1","primary_source":{"source":{"pip":{"upgrade":false,"extra_args":[]},"package":"cfn-lint","version":"0.77.5"},"type":"registry+v1","id":"pkg:pypi\/cfn-lint@0.77.5"},"name":"cfn-lint"}

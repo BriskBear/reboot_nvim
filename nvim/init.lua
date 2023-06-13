@@ -3,7 +3,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- Add a '/' to the config path so that sourced files can be find-tabbed
-local nvimrc = vim.fn.stdpath 'config' .. '/'
+nvimrc = vim.fn.stdpath 'config' .. '/'
+vim.cmd('let $BASH_ENV = "/etc/profile"')
 
 -- Install package manager
 --    `:help lazy.nvim.txt` for more info
@@ -137,49 +138,42 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
-vim.cmd('source ' .. nvimrc .. 'color/Emerald.vim')   -- Use Emerald Legacy Color Scheme
+require('keymap')
+
+-- Amythest colors for root, else Emerald
+if os.getenv("USER") == 'root' then
+  vim.cmd('source ' .. nvimrc .. 'color/Amythest.vim')
+else
+  vim.cmd('source ' .. nvimrc .. 'color/Emerald.vim')
+end
+
+-- vim.cmd('source ' .. nvimrc .. 'color/Emerald.vim')   -- Use Emerald Legacy Color Scheme
 vim.cmd('source ' .. nvimrc .. 'legacy/netrw.vim')    -- Enable Legacy Netrw config until I refactor
 vim.cmd('source ' .. nvimrc .. 'legacy/brackets.vim') -- Enable Legacy brackets config until I refactor
 vim.cmd('source ' .. nvimrc .. 'legacy/comments.vim') -- Enable Legacy comments config until I refactor
+vim.cmd('source ' .. nvimrc .. 'legacy/comments.vim') -- Enable Legacy comments config until I refactor
 
 -- [[ Setting options ]]
--- vim.o.clipboard  = 'unnamedplus'       -- Sync clipboard between OS and Neovim.
-vim.o.breakindent   = true                -- Enable break indent
-vim.o.colorcolumn   = '93,100'            -- Set Column warnings
-vim.o.completeopt   = 'menuone,noselect'  -- Set completeopt to have a better completion experience
-vim.o.cursorline    = true                -- Find the cursor row easily
-vim.o.hlsearch      = true                -- Set highlight on search
-vim.o.ignorecase    = true
-vim.o.lcs           = "trail:❚,space:❚"   -- Use column to indicate spaces when enabled
-vim.o.mouse         = 'a'                 -- Enable mouse mode
-vim.o.smartcase     = true                -- Case insensitive searching UNLESS /C or capital in search
-vim.o.termguicolors = true                -- NOTE: You should make sure your terminal supports this
-vim.o.timeout       = true
-vim.o.timeoutlen    = 300                 -- Decrease update time
-vim.o.undofile      = true                -- Save undo history
-vim.o.updatetime    = 250
-vim.wo.wrap         = false               -- Line Wrapping off
-vim.wo.number       = true                -- Line Numbers default
-vim.wo.signcolumn   = 'yes'               -- Keep signcolumn on by default
-
--- [[ Basic Keymaps ]]
-vim.keymap.set('i', 'kj', '<esc>',                                                            { desc = 'Home Row Escape, No more Vim-Pinkey!' })
-vim.keymap.set('n', '<C-x>', ':q<CR>',                                                        { desc = 'Ctrl-x to quit, like nano' })
-vim.keymap.set({ 'i','n' }, '<C-l>', ':Format<CR>:echo "AutoFormat!"<CR>',                    { desc = 'Auto [F]ormat' })
-vim.keymap.set('n', '<leader>q', ':qa!<CR>',                                                  { desc = '[Q]uit all without saving' })
-vim.keymap.set('n', '<leader>r', ':source /etc/xdg/nvim/init.lua<CR>',                        { desc = '[R]eload Config' })
-vim.keymap.set('n', '<leader>init', ':tabfind /etc/xdg/nvim/init.lua<CR>',                    { desc = 'Edit [init].lua' })
-vim.keymap.set('n', '<leader>bra', ':tabfind /etc/xdg/nvim/legacy/brackets.vim<CR>',          { desc = 'Edit [bra]ckets' })
-vim.keymap.set('n', '<leader>col', ':tabfind $HOME/.local/share/nvim/lazy/onedark.nvim/<CR>', { desc = 'Edit [col]ors' })
-vim.keymap.set('n', '<M-p>', ':set list!<CR>',                                                { desc = 'Move tab [Left]' })
-vim.keymap.set('n', '<C-Left>', ':-tabmove<CR>',                                              { desc = 'Move tab [Left]' })
-vim.keymap.set('n', '<C-Right>', ':+tabmove<CR>',                                             { desc = 'Move tab [Right]' })
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>',                                              { silent = true }) -- Keymaps for better default experience
-vim.keymap.set('n', 'k', "v:count == -1 ? 'gk' : 'k'",                                        { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == -1 ? 'gj' : 'j'",                                        { expr = true, silent = true }) -- Remap for dealing with word wrap
-vim.keymap.set({ 'n', 'x' }, 'ga', '<Plug>(EasyAlign)',                                       { desc = 'Enable EasyAlign' })
-vim.keymap.set('n', 'D', 'gg$vT:x:r!date -u +\\%s<CR>kJ:w<CR>',                               { desc = 'Timestamp Header' })
-vim.cmd('vmap <M-A> gaip*<c-X>') -- Visual Select regex align
+local set = vim.opt
+local setw = vim.wo
+-- set.clipboard  = 'unnamedplus'       -- Sync clipboard between OS and Neovim.
+set.breakindent   = true                -- Enable break indent
+set.colorcolumn   = '93,100'            -- Set Column warnings
+set.completeopt   = 'menuone,noselect'  -- Set completeopt to have a better completion experience
+set.cursorline    = true                -- Find the cursor row easily
+set.hlsearch      = true                -- Set highlight on search
+set.ignorecase    = true
+set.lcs           = {eol = "↲", space = "󰹞", tab = "▸ ", trail="󰹞"}   -- Use column to indicate spaces when enabled
+set.mouse         = 'a'                 -- Enable mouse mode
+set.smartcase     = true                -- Case insensitive searching UNLESS /C or capital in search
+set.termguicolors = true                -- NOTE: You should make sure your terminal supports this
+set.timeout       = true
+set.timeoutlen    = 300                 -- Decrease update time
+set.undofile      = true                -- Save undo history
+set.updatetime    = 250
+setw.wrap         = false               -- Line Wrapping off
+setw.number       = true                -- Line Numbers default
+setw.signcolumn   = 'yes'               -- Keep signcolumn on by default
 
 -- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
