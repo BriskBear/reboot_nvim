@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec node "/home/elijahdaniel/.local/share/nvim/mason/packages/spectral-language-server/dist/server/index.js" "$@"

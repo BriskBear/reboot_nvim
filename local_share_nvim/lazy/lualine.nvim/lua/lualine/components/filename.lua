@@ -20,7 +20,7 @@ local default_options = {
 }
 
 local function is_new_file()
-  local filename = vim.fn.expand('%')
+  local filename = vim.fn.expand('%:p')
   return filename ~= '' and vim.bo.buftype == '' and vim.fn.filereadable(filename) == 0
 end
 
@@ -83,7 +83,7 @@ M.update_status = function(self)
     data = filename_and_parent(vim.fn.expand('%:p:~'), path_separator)
   else
     -- just filename
-    data = vim.fn.expand('%:t')
+    data = vim.fn.expand('%:~:.')
   end
 
   data = modules.utils.stl_escape(data)

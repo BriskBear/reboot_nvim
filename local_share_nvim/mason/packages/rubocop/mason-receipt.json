@@ -1,0 +1,1 @@
+{"links":{"bin":{"rubocop":"rubocop"},"opt":{},"share":{}},"metrics":{"start_time":1690907623188,"completion_time":1690907630959},"name":"rubocop","primary_source":{"id":"pkg:gem\/rubocop@1.55.1","type":"registry+v1","source":{"package":"rubocop","version":"1.55.1"}},"secondary_sources":[],"schema_version":"1.1"}

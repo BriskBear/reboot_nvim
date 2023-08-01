@@ -1,0 +1,18 @@
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/solargraph/gems/jaro_winkler-1.5.6/ext/jaro_winkler
+/home/elijahdaniel/.asdf/installs/ruby/3.1.2/bin/ruby -I /home/elijahdaniel/.asdf/installs/ruby/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230707-155408-rrew9v.rb extconf.rb
+creating Makefile
+
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/solargraph/gems/jaro_winkler-1.5.6/ext/jaro_winkler
+make DESTDIR\= clean
+
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/solargraph/gems/jaro_winkler-1.5.6/ext/jaro_winkler
+make DESTDIR\=
+compiling adj_matrix.c
+compiling codepoints.c
+compiling jaro.c
+compiling jaro_winkler.c
+linking shared-object jaro_winkler/jaro_winkler_ext.so
+
+current directory: /home/elijahdaniel/.local/share/nvim/mason/staging/solargraph/gems/jaro_winkler-1.5.6/ext/jaro_winkler
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 jaro_winkler_ext.so ./.gem.20230707-155408-yuomqh/jaro_winkler
