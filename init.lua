@@ -161,11 +161,14 @@ set.breakindent   = true                -- Enable break indent
 set.colorcolumn   = '93,100'            -- Set Column warnings
 set.completeopt   = 'menuone,noselect'  -- Set completeopt to have a better completion experience
 set.cursorline    = true                -- Find the cursor row easily
+set.expandtab     = true                -- Spaces instead of tabs
 set.hlsearch      = true                -- Set highlight on search
 set.ignorecase    = true
 set.lcs           = {eol = "↲", space = "󰹞", tab = "▸ ", trail="󰹞"}   -- Use column to indicate spaces when enabled
 set.mouse         = 'a'                 -- Enable mouse mode
+set.shiftwidth    = 2                   -- 2 Spaces / Tab
 set.smartcase     = true                -- Case insensitive searching UNLESS /C or capital in search
+set.tabstop       = 2                   -- 2 Spaces / Tab
 set.termguicolors = true                -- NOTE: You should make sure your terminal supports this
 set.timeout       = true
 set.timeoutlen    = 300                 -- Decrease update time
